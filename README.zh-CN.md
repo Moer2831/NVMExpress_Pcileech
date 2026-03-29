@@ -183,7 +183,9 @@ flowchart LR
 | --- | --- | --- | --- |
 | `clk` | 100 MHz 板载时钟 | `pcileech_fifo`、顶层控制、FT601 系统侧缓存 | 系统控制面 |
 | `ft601_clk` / `clk_com` | FT601 接口时钟 | `pcileech_com`、`pcileech_ft601` | 通信 I/O 域 |
-| `clk_pcie` | `pcie_7x_0` 导出的 PCIe 用户时钟 | `pcileech_pcie_a7`、config shadow、BAR 引擎、NVMe 引擎 | 在线 PCIe 事务域 |
+| `clk_pcie` | `pcie_7x_0` 导出的 62.5 MHz PCIe 用户时钟 | `pcileech_pcie_a7`、config shadow、BAR 引擎、NVMe 引擎 | 在线 PCIe 事务域 |
+
+当前工程配置使用的是 62.5 MHz PCIe 用户域时钟。Vivado 配置脚本里把 `CONFIG.User_Clk_Freq` 设为 `62.5`，而且 RTL 里多处 PCIe 侧延时/计数常量也是按这个频率计算的。
 
 ## 事务时序图
 

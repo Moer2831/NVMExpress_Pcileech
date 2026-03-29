@@ -184,7 +184,9 @@ flowchart LR
 | --- | --- | --- | --- |
 | `clk` | 100 MHz board clock | `pcileech_fifo`, top-level control, FT601 system-side buffering | system control plane |
 | `ft601_clk` / `clk_com` | FT601 interface clock | `pcileech_com`, `pcileech_ft601` | communication I/O domain |
-| `clk_pcie` | PCIe user clock from `pcie_7x_0` | `pcileech_pcie_a7`, config shadow, BAR engine, NVMe engine | live PCIe transaction domain |
+| `clk_pcie` | 62.5 MHz PCIe user clock from `pcie_7x_0` | `pcileech_pcie_a7`, config shadow, BAR engine, NVMe engine | live PCIe transaction domain |
+
+The current project configuration uses a 62.5 MHz PCIe user clock. The active Vivado profile sets `CONFIG.User_Clk_Freq` to `62.5`, and the PCIe-side timing constants in the RTL are dimensioned against that value.
 
 ## Transaction Timing
 
