@@ -1,6 +1,6 @@
 #
 # NVM_Express_Pcileech_FPGA_75T
-# discord: Moer_2831
+# discord: Moer2831
 # community: https://discord.gg/sXcQhxa8qy
 # Vivado generated .tcl for creating the NVM_Express_Pcileech_FPGA_75T project.
 # Run from within "Vivado Tcl Shell" with command: source vivado_generate_project_75t.tcl -notrace

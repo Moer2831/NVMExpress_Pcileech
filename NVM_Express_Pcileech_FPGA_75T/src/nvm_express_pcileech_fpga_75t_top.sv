@@ -6,7 +6,7 @@
 // (c) Ulf Frisk, 2019-2024
 // Author: Ulf Frisk, pcileech@frizk.net
 // Project: NVM_Express_Pcileech_FPGA_75T
-// discord: Moer_2831
+// discord: Moer2831
 // community: https://discord.gg/sXcQhxa8qy
 //
 

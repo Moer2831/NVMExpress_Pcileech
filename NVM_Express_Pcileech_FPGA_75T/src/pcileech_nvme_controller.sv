@@ -1,7 +1,7 @@
 // pcileech_nvme_controller.sv
 // ============================================================
 // NVM_Express_Pcileech_FPGA_75T
-// discord: Moer_2831
+// discord: Moer2831
 // community: https://discord.gg/sXcQhxa8qy
 // NVMe Controller Emulation for NE-256 2280 (SM2263)
 // Replaces pcileech_bar_impl_zerowrite4k as BAR0 implementation.

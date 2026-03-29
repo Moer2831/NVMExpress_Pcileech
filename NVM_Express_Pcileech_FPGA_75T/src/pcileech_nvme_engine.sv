@@ -1,7 +1,7 @@
 // pcileech_nvme_engine.sv
 // ============================================================
 // NVM_Express_Pcileech_FPGA_75T
-// discord: Moer_2831
+// discord: Moer2831
 // community: https://discord.gg/sXcQhxa8qy
 // NVMe Admin Queue Engine & DMA/TLP Generator
 // Companion to pcileech_nvme_controller.sv (BAR0 register file).

@@ -1,5 +1,5 @@
 # NVM_Express_Pcileech_FPGA_75T
-# discord: Moer_2831
+# discord: Moer2831
 # community: https://discord.gg/sXcQhxa8qy
 # target_collect_configspace.ps1
 # Run this on the TARGET PC (as Administrator) to extract the NE-256 NVMe config space.
