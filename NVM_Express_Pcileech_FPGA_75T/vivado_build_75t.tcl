@@ -8,6 +8,19 @@
 puts "-------------------------------------------------------"
 puts " STARTING SYNTHESIS STEP.                              "
 puts "-------------------------------------------------------"
+set proj_dir [get_property directory [current_project]]
+set board_dir [file normalize [file join $proj_dir ..]]
+set proj_name [get_property name [current_project]]
+set synth_dir [get_property DIRECTORY [get_runs synth_1]]
+file mkdir $synth_dir
+foreach mem_file {nvme_identify_ctrl.hex nvme_identify_ns.hex} {
+    set src [file join $board_dir ip $mem_file]
+    set dst [file join $synth_dir $mem_file]
+    if {![file exists $src]} {
+        error "Missing synthesis memory init file: $src"
+    }
+    file copy -force $src $dst
+}
 launch_runs -jobs 4 synth_1
 puts "-------------------------------------------------------"
 puts " WAITING FOR SYNTHESIS STEP TO FINISH ...              "
@@ -23,7 +36,9 @@ puts " WAITING FOR IMPLEMENTATION STEP TO FINISH ...         "
 puts " THIS IS LIKELY TO TAKE A VERY LONG TIME.              "
 puts "-------------------------------------------------------"
 wait_on_run impl_1
-file copy -force ./NVM_Express_Pcileech_FPGA_75T/NVM_Express_Pcileech_FPGA_75T.runs/impl_1/nvm_express_pcileech_fpga_75t_top.bin NVM_Express_Pcileech_FPGA_75T.bin
+set impl_bin [file join $proj_dir "${proj_name}.runs" impl_1 nvm_express_pcileech_fpga_75t_top.bin]
+set output_bin [file join $board_dir "${proj_name}.bin"]
+file copy -force $impl_bin $output_bin
 puts "-------------------------------------------------------"
 puts " BUILD HOPEFULLY COMPLETED.                            "
 puts "-------------------------------------------------------"

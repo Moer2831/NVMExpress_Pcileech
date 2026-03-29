@@ -22,9 +22,9 @@
 ## Snapshot
 
 - Board project directory: `NVM_Express_Pcileech_FPGA_75T/`
-- Vivado project name: `NVM_Express_Pcileech_FPGA_75T`
+- Vivado project name: `pcileech_enigma_x1`
 - Top module: `nvm_express_pcileech_fpga_75t_top`
-- Build output: `NVM_Express_Pcileech_FPGA_75T/NVM_Express_Pcileech_FPGA_75T.bin`
+- Build output: `NVM_Express_Pcileech_FPGA_75T/pcileech_enigma_x1.bin`
 - Build inputs workspace: `pipeline/build_inputs/`
 
 ## Repository Layout
@@ -275,7 +275,7 @@ source vivado_build_75t.tcl -notrace
 Expected output:
 
 ```text
-NVM_Express_Pcileech_FPGA_75T/NVM_Express_Pcileech_FPGA_75T.bin
+NVM_Express_Pcileech_FPGA_75T/pcileech_enigma_x1.bin
 ```
 
 ## Build Inputs Commands

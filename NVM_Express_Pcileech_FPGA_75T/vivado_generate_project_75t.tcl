@@ -2,7 +2,7 @@
 # NVM_Express_Pcileech_FPGA_75T
 # discord: Moer2831
 # community: https://discord.gg/sXcQhxa8qy
-# Vivado generated .tcl for creating the NVM_Express_Pcileech_FPGA_75T project.
+# Vivado generated .tcl for creating the pcileech_enigma_x1 project.
 # Run from within "Vivado Tcl Shell" with command: source vivado_generate_project_75t.tcl -notrace
 #
 
@@ -15,7 +15,7 @@ if { [info exists ::origin_dir_loc] } {
 }
 
 # Set the project name
-set _xil_proj_name_ "NVM_Express_Pcileech_FPGA_75T"
+set _xil_proj_name_ "pcileech_enigma_x1"
 
 # Use project name variable, if specified in the tcl shell
 if { [info exists ::user_project_name] } {
@@ -195,6 +195,8 @@ set files [list \
  [file normalize "${origin_dir}/ip/nvmexp_bar0.coe" ]\
  [file normalize "${origin_dir}/ip/nvmexp_cfgspace.coe" ]\
  [file normalize "${origin_dir}/ip/nvmexp_cfgspace_mask.coe" ]\
+ [file normalize "${origin_dir}/ip/nvme_identify_ctrl.hex" ]\
+ [file normalize "${origin_dir}/ip/nvme_identify_ns.hex" ]\
  [file normalize "${origin_dir}/ip/bram_pcie_cfgspace.xci" ]\
 ]
 set imported_files [import_files -fileset sources_1 $files]

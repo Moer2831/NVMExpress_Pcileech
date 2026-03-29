@@ -22,9 +22,9 @@
 ## 项目速览
 
 - 板级工程目录：`NVM_Express_Pcileech_FPGA_75T/`
-- Vivado 工程名：`NVM_Express_Pcileech_FPGA_75T`
+- Vivado 工程名：`pcileech_enigma_x1`
 - 顶层模块：`nvm_express_pcileech_fpga_75t_top`
-- 构建输出：`NVM_Express_Pcileech_FPGA_75T/NVM_Express_Pcileech_FPGA_75T.bin`
+- 构建输出：`NVM_Express_Pcileech_FPGA_75T/pcileech_enigma_x1.bin`
 - 构建输入目录：`pipeline/build_inputs/`
 
 ## 仓库结构
@@ -274,7 +274,7 @@ source vivado_build_75t.tcl -notrace
 输出文件：
 
 ```text
-NVM_Express_Pcileech_FPGA_75T/NVM_Express_Pcileech_FPGA_75T.bin
+NVM_Express_Pcileech_FPGA_75T/pcileech_enigma_x1.bin
 ```
 
 ## 构建输入命令

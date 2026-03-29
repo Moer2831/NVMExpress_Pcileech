@@ -35,8 +35,9 @@ set_property CONFIG.Subsystem_ID                {2263}   $ip
 set_property CONFIG.Class_Code_Base             {01}     $ip
 set_property CONFIG.Class_Code_Sub              {08}     $ip
 set_property CONFIG.Class_Code_Interface        {02}     $ip
-set_property CONFIG.Base_Class_Menu             {Mass_storage_controller} $ip
-set_property CONFIG.Sub_Class_Interface_Menu    {Non-Volatile_memory_controller} $ip
+# Vivado 2024.1 no longer exposes the NVMe subclass through the menu enum.
+# Keep the explicit numeric class code above and skip the menu-backed fields
+# so the script remains compatible across Vivado IP revisions.
 
 # ---- BAR0: 16KB, 64-bit, non-prefetchable ----
 # Must match NVMe register space layout:
@@ -64,9 +65,10 @@ set_property CONFIG.Expansion_Rom_Enabled       {false}  $ip
 set_property CONFIG.MSIx_Enabled                {true}   $ip
 set_property CONFIG.MSIx_Table_Size             {10}     $ip ;# 16 entries (hex 0x10)
 set_property CONFIG.MSIx_Table_Offset           {2000}   $ip ;# BAR0 + 0x2000
-set_property CONFIG.MSIx_Table_BIR              {BAR_0}  $ip
+# Vivado 2024.1 exposes BAR0 as the packed enum name "BAR_1:0".
+set_property CONFIG.MSIx_Table_BIR              {BAR_1:0}  $ip
 set_property CONFIG.MSIx_PBA_Offset             {2100}   $ip ;# BAR0 + 0x2100
-set_property CONFIG.MSIx_PBA_BIR               {BAR_0}  $ip
+set_property CONFIG.MSIx_PBA_BIR                {BAR_1:0}  $ip
 
 # ---- Keep MSI as fallback ----
 set_property CONFIG.MSI_Enabled                 {true}   $ip
