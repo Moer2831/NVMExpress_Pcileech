@@ -1,12 +1,23 @@
+<div align="center">
+
 # NVM_Express_Pcileech_FPGA_75T
 
-> discord: `Moer2831`
->
-> community: `https://discord.gg/sXcQhxa8qy`
->
-> English: [README.md](./README.md)
+<p><strong>面向 75T 板卡的 NVMe FPGA 工程，包含整理后的工作流、统一后的工程命名，以及偏工程说明书风格的模块结构、工作链路和时序说明。</strong></p>
 
-面向 75T 板卡的 NVMe FPGA 工程，包含整理后的工作流、统一后的工程命名，以及偏工程说明书风格的模块结构、工作链路和时序说明。
+[![Discord](https://img.shields.io/badge/Discord-Moer2831-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/sXcQhxa8qy)
+[![Community](https://img.shields.io/badge/Community-%E7%AB%8B%E5%8D%B3%E5%8A%A0%E5%85%A5-0A66C2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/sXcQhxa8qy)
+[![English](https://img.shields.io/badge/Docs-English-7C3AED?style=for-the-badge&logo=readthedocs&logoColor=white)](./README.md)
+
+![平台](https://img.shields.io/badge/Platform-Artix--7%2075T-111827?style=flat-square)
+![协议](https://img.shields.io/badge/Protocol-NVMe-065F46?style=flat-square)
+![工具链](https://img.shields.io/badge/Toolchain-Vivado-B45309?style=flat-square)
+![流程](https://img.shields.io/badge/Pipeline-build__inputs-1D4ED8?style=flat-square)
+
+</div>
+
+> 联系方式：[Moer2831](https://discord.gg/sXcQhxa8qy)  
+> 社区链接：[discord.gg/sXcQhxa8qy](https://discord.gg/sXcQhxa8qy)  
+> 文档语言：[中文](./README.zh-CN.md) | [English](./README.md)
 
 ## 项目速览
 
@@ -64,7 +75,7 @@ pipeline/
 | `pcileech_nvme_controller` | BAR0 寄存器映射、CC/CSTS/AQA/ASQ/ACQ、doorbell、MSI-X 表存储 | BAR0 访问、对 engine 的控制输出 |
 | `pcileech_nvme_engine` | Admin SQ 抓取、命令解析执行、DMA 写回、CQ 写回、MSI-X 触发 | 原始 completion、TX AXIS 输出 |
 
-## 构建输入准备流程
+## 构建输入工作流
 
 构建流程与 FPGA 工程本体拆开，便于整理构建输入到构建产物的转换链路。
 
@@ -264,7 +275,7 @@ source vivado_build_75t.tcl -notrace
 NVM_Express_Pcileech_FPGA_75T/NVM_Express_Pcileech_FPGA_75T.bin
 ```
 
-## 构建输入工作流
+## 构建输入命令
 
 请把构建输入放到：
 

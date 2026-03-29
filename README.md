@@ -1,12 +1,23 @@
+<div align="center">
+
 # NVM_Express_Pcileech_FPGA_75T
 
-> discord: `Moer2831`
->
-> community: `https://discord.gg/sXcQhxa8qy`
->
-> Chinese: [README.zh-CN.md](./README.zh-CN.md)
+<p><strong>Compact 75T NVMe FPGA project with a cleaned workflow, structured build inputs, and engineering-style runtime documentation.</strong></p>
 
-Compact 75T NVMe FPGA project with a cleaned workflow, branded project structure, and documentation focused on build flow, module responsibilities, and runtime timing.
+[![Discord](https://img.shields.io/badge/Discord-Moer2831-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/sXcQhxa8qy)
+[![Community](https://img.shields.io/badge/Community-Join%20Server-0A66C2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/sXcQhxa8qy)
+[![Chinese](https://img.shields.io/badge/Docs-%E4%B8%AD%E6%96%87-0F766E?style=for-the-badge&logo=readthedocs&logoColor=white)](./README.zh-CN.md)
+
+![Platform](https://img.shields.io/badge/Platform-Artix--7%2075T-111827?style=flat-square)
+![Protocol](https://img.shields.io/badge/Protocol-NVMe-065F46?style=flat-square)
+![Toolchain](https://img.shields.io/badge/Toolchain-Vivado-B45309?style=flat-square)
+![Pipeline](https://img.shields.io/badge/Pipeline-build__inputs-1D4ED8?style=flat-square)
+
+</div>
+
+> Contact: [Moer2831](https://discord.gg/sXcQhxa8qy)  
+> Community: [discord.gg/sXcQhxa8qy](https://discord.gg/sXcQhxa8qy)  
+> Language: [English](./README.md) | [中文](./README.zh-CN.md)
 
 ## Snapshot
 
@@ -64,7 +75,7 @@ pipeline/
 | `pcileech_nvme_controller` | BAR0 register map, CC/CSTS/AQA/ASQ/ACQ handling, doorbells, MSI-X table storage | BAR0 accesses, engine control outputs |
 | `pcileech_nvme_engine` | Admin SQ fetch, command parse/execute, DMA write generation, CQ writeback, MSI-X trigger | raw RX completions, TX AXIS output |
 
-## Data Preparation Workflow
+## Build Inputs Workflow
 
 The build pipeline is split from the FPGA project for a clearer data-to-build flow.
 
@@ -265,7 +276,7 @@ Expected output:
 NVM_Express_Pcileech_FPGA_75T/NVM_Express_Pcileech_FPGA_75T.bin
 ```
 
-## Build Inputs Workflow
+## Build Inputs Commands
 
 Place reference files in:
 
