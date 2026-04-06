@@ -15,8 +15,8 @@
 
 </div>
 
-> Contact: [Moer2831](https://discord.gg/sXcQhxa8qy)  
-> Community: [discord.gg/sXcQhxa8qy](https://discord.gg/sXcQhxa8qy)  
+> Contact: [Moer2831](https://discord.gg/5QtF4AAbhk)  
+> Community: [discord.gg/sXcQhxa8qy](https://discord.gg/5QtF4AAbhk)  
 > Language: [English](./README.md) | [中文](./README.zh-CN.md)
 
 ## Snapshot
