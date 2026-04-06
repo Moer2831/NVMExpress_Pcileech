@@ -15,8 +15,8 @@
 
 </div>
  
-> 联系方式：[Moer2831](https://discord.gg/sXcQhxa8qy)  
-> 社区链接：[discord.gg/sXcQhxa8qy](https://discord.gg/sXcQhxa8qy)  
+> 联系方式：[Moer2831](https://discord.gg/5QtF4AAbhk)  
+> 社区链接：[discord](https://discord.gg/5QtF4AAbhk)  
 > 文档语言：[中文](./README.zh-CN.md) | [English](./README.md)
 
 ## 项目速览
